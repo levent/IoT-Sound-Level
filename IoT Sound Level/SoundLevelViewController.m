@@ -70,7 +70,7 @@
 		levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.10 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
 //		levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
     } else {
-        NSLog([error description]);
+        NSLog(@"%@",[error description]);
     }
 }
 
