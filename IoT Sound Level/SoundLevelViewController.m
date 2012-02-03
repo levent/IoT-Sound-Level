@@ -67,7 +67,8 @@
         [recorder prepareToRecord];
         recorder.meteringEnabled = YES;
         [recorder record];
-		levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
+		levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.10 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
+//		levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
     } else {
         NSLog([error description]);
     }
@@ -76,6 +77,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    currentSoundLevel.text = @"-";
     if (recorder) {
         [levelTimer invalidate];
         levelTimer = nil;
@@ -103,8 +105,8 @@
 	const double ALPHA = 0.05;
 	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
 	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;
-    
-	NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
+    currentSoundLevel.text = [NSString stringWithFormat:@"%.2db", [recorder averagePowerForChannel:0]];
+//	NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
 
 }
 
