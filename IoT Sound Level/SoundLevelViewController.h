@@ -12,6 +12,8 @@
 @interface SoundLevelViewController : UIViewController {
     AVAudioRecorder *recorder;
     NSTimer *levelTimer;
+    
+    double lowPassResults;
 }
 
 - (void)levelTimerCallback:(NSTimer *)timer;

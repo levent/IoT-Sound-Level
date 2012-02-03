@@ -53,7 +53,6 @@
     } else {
         NSLog([error description]);
     }
-    
 }
 
 - (void)viewDidUnload
@@ -90,8 +89,27 @@
 }
 
 - (void)levelTimerCallback:(NSTimer *)timer {
-	[recorder updateMeters];
-	NSLog(@"Average input: %f Peak input: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0]);
+//	NSLog(@"Average input: %f Peak input: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0]);
+
+    [recorder updateMeters];
+    
+	const double ALPHA = 0.05;
+	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
+	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;
+    
+	NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
+
 }
+
+//- (void)listenForBlow:(NSTimer *)timer {
+//	[recorder updateMeters];
+//    
+//	const double ALPHA = 0.05;
+//	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
+//	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;
+//    
+//	if (lowPassResults > 0.95)
+//		NSLog(@"Mic blow detected");
+//}
 
 @end
