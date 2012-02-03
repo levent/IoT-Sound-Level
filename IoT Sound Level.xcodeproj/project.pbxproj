@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BE7191214DC3F8B00B530FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191114DC3F8B00B530FC /* UIKit.framework */; };
+		2BE7191414DC3F8B00B530FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191314DC3F8B00B530FC /* Foundation.framework */; };
+		2BE7191614DC3F8B00B530FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191514DC3F8B00B530FC /* CoreGraphics.framework */; };
+		2BE7191C14DC3F8B00B530FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7191A14DC3F8B00B530FC /* InfoPlist.strings */; };
+		2BE7191E14DC3F8B00B530FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7191D14DC3F8B00B530FC /* main.m */; };
+		2BE7192214DC3F8B00B530FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192114DC3F8B00B530FC /* AppDelegate.m */; };
+		2BE7192514DC3F8B00B530FC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192414DC3F8B00B530FC /* FirstViewController.m */; };
+		2BE7192714DC3F8B00B530FC /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7192614DC3F8B00B530FC /* first.png */; };
+		2BE7192914DC3F8B00B530FC /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7192814DC3F8B00B530FC /* first@2x.png */; };
+		2BE7192C14DC3F8B00B530FC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192B14DC3F8B00B530FC /* SecondViewController.m */; };
+		2BE7192E14DC3F8B00B530FC /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7192D14DC3F8B00B530FC /* second.png */; };
+		2BE7193014DC3F8B00B530FC /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7192F14DC3F8B00B530FC /* second@2x.png */; };
+		2BE7193314DC3F8B00B530FC /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7193114DC3F8B00B530FC /* FirstViewController.xib */; };
+		2BE7193614DC3F8B00B530FC /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7193414DC3F8B00B530FC /* SecondViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BE7190D14DC3F8B00B530FC /* IoT Sound Level.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IoT Sound Level.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE7191114DC3F8B00B530FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2BE7191314DC3F8B00B530FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2BE7191514DC3F8B00B530FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2BE7191914DC3F8B00B530FC /* IoT Sound Level-Info.plist */ = {isa = PBXFileReference; path = "IoT Sound Level-Info.plist"; sourceTree = "<group>"; };
+		2BE7191B14DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BE7191D14DC3F8B00B530FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BE7191F14DC3F8B00B530FC /* IoT Sound Level-Prefix.pch */ = {isa = PBXFileReference; path = "IoT Sound Level-Prefix.pch"; sourceTree = "<group>"; };
+		2BE7192014DC3F8B00B530FC /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BE7192114DC3F8B00B530FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BE7192314DC3F8B00B530FC /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		2BE7192414DC3F8B00B530FC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		2BE7192614DC3F8B00B530FC /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		2BE7192814DC3F8B00B530FC /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		2BE7192A14DC3F8B00B530FC /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		2BE7192B14DC3F8B00B530FC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		2BE7192D14DC3F8B00B530FC /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		2BE7192F14DC3F8B00B530FC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		2BE7193214DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
+		2BE7193514DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BE7190A14DC3F8B00B530FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE7191214DC3F8B00B530FC /* UIKit.framework in Frameworks */,
+				2BE7191414DC3F8B00B530FC /* Foundation.framework in Frameworks */,
+				2BE7191614DC3F8B00B530FC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BE7190214DC3F8B00B530FC = {
+			isa = PBXGroup;
+			children = (
+				2BE7191714DC3F8B00B530FC /* IoT Sound Level */,
+				2BE7191014DC3F8B00B530FC /* Frameworks */,
+				2BE7190E14DC3F8B00B530FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BE7190E14DC3F8B00B530FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7190D14DC3F8B00B530FC /* IoT Sound Level.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BE7191014DC3F8B00B530FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7191114DC3F8B00B530FC /* UIKit.framework */,
+				2BE7191314DC3F8B00B530FC /* Foundation.framework */,
+				2BE7191514DC3F8B00B530FC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BE7191714DC3F8B00B530FC /* IoT Sound Level */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7192014DC3F8B00B530FC /* AppDelegate.h */,
+				2BE7192114DC3F8B00B530FC /* AppDelegate.m */,
+				2BE7192314DC3F8B00B530FC /* FirstViewController.h */,
+				2BE7192414DC3F8B00B530FC /* FirstViewController.m */,
+				2BE7192614DC3F8B00B530FC /* first.png */,
+				2BE7192814DC3F8B00B530FC /* first@2x.png */,
+				2BE7192A14DC3F8B00B530FC /* SecondViewController.h */,
+				2BE7192B14DC3F8B00B530FC /* SecondViewController.m */,
+				2BE7192D14DC3F8B00B530FC /* second.png */,
+				2BE7192F14DC3F8B00B530FC /* second@2x.png */,
+				2BE7193114DC3F8B00B530FC /* FirstViewController.xib */,
+				2BE7193414DC3F8B00B530FC /* SecondViewController.xib */,
+				2BE7191814DC3F8B00B530FC /* Supporting Files */,
+			);
+			path = "IoT Sound Level";
+			sourceTree = "<group>";
+		};
+		2BE7191814DC3F8B00B530FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7191914DC3F8B00B530FC /* IoT Sound Level-Info.plist */,
+				2BE7191A14DC3F8B00B530FC /* InfoPlist.strings */,
+				2BE7191D14DC3F8B00B530FC /* main.m */,
+				2BE7191F14DC3F8B00B530FC /* IoT Sound Level-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BE7190C14DC3F8B00B530FC /* IoT Sound Level */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BE7193914DC3F8B00B530FC /* Build configuration list for PBXNativeTarget "IoT Sound Level" */;
+			buildPhases = (
+				2BE7190914DC3F8B00B530FC /* Sources */,
+				2BE7190A14DC3F8B00B530FC /* Frameworks */,
+				2BE7190B14DC3F8B00B530FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IoT Sound Level";
+			productName = "IoT Sound Level";
+			productReference = 2BE7190D14DC3F8B00B530FC /* IoT Sound Level.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BE7190414DC3F8B00B530FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 2BE7190714DC3F8B00B530FC /* Build configuration list for PBXProject "IoT Sound Level" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2BE7190214DC3F8B00B530FC;
+			productRefGroup = 2BE7190E14DC3F8B00B530FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BE7190C14DC3F8B00B530FC /* IoT Sound Level */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BE7190B14DC3F8B00B530FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE7191C14DC3F8B00B530FC /* InfoPlist.strings in Resources */,
+				2BE7192714DC3F8B00B530FC /* first.png in Resources */,
+				2BE7192914DC3F8B00B530FC /* first@2x.png in Resources */,
+				2BE7192E14DC3F8B00B530FC /* second.png in Resources */,
+				2BE7193014DC3F8B00B530FC /* second@2x.png in Resources */,
+				2BE7193314DC3F8B00B530FC /* FirstViewController.xib in Resources */,
+				2BE7193614DC3F8B00B530FC /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BE7190914DC3F8B00B530FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE7191E14DC3F8B00B530FC /* main.m in Sources */,
+				2BE7192214DC3F8B00B530FC /* AppDelegate.m in Sources */,
+				2BE7192514DC3F8B00B530FC /* FirstViewController.m in Sources */,
+				2BE7192C14DC3F8B00B530FC /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BE7191A14DC3F8B00B530FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BE7191B14DC3F8B00B530FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2BE7193114DC3F8B00B530FC /* FirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BE7193214DC3F8B00B530FC /* en */,
+			);
+			name = FirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		2BE7193414DC3F8B00B530FC /* SecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BE7193514DC3F8B00B530FC /* en */,
+			);
+			name = SecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BE7193714DC3F8B00B530FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BE7193814DC3F8B00B530FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BE7193A14DC3F8B00B530FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoT Sound Level/IoT Sound Level-Prefix.pch";
+				INFOPLIST_FILE = "IoT Sound Level/IoT Sound Level-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2BE7193B14DC3F8B00B530FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoT Sound Level/IoT Sound Level-Prefix.pch";
+				INFOPLIST_FILE = "IoT Sound Level/IoT Sound Level-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BE7190714DC3F8B00B530FC /* Build configuration list for PBXProject "IoT Sound Level" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE7193714DC3F8B00B530FC /* Debug */,
+				2BE7193814DC3F8B00B530FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BE7193914DC3F8B00B530FC /* Build configuration list for PBXNativeTarget "IoT Sound Level" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE7193A14DC3F8B00B530FC /* Debug */,
+				2BE7193B14DC3F8B00B530FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BE7190414DC3F8B00B530FC /* Project object */;
+}
