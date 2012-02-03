@@ -14,6 +14,8 @@
     NSTimer *levelTimer;
     
     double lowPassResults;
+    
+    IBOutlet UILabel *currentSoundLevel;
 }
 
 - (void)levelTimerCallback:(NSTimer *)timer;
