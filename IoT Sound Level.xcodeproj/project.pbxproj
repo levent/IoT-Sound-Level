@@ -24,6 +24,7 @@
 		2BE7194814DC426900B530FC /* 160-voicemail-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194614DC426900B530FC /* 160-voicemail-2@2x.png */; };
 		2BE7194B14DC42FB00B530FC /* 66-microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194914DC42FB00B530FC /* 66-microphone.png */; };
 		2BE7194C14DC42FB00B530FC /* 66-microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194A14DC42FB00B530FC /* 66-microphone@2x.png */; };
+		2BE7194F14DC43AB00B530FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7194D14DC43A200B530FC /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		2BE7194614DC426900B530FC /* 160-voicemail-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "160-voicemail-2@2x.png"; sourceTree = "<group>"; };
 		2BE7194914DC42FB00B530FC /* 66-microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "66-microphone.png"; sourceTree = "<group>"; };
 		2BE7194A14DC42FB00B530FC /* 66-microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "66-microphone@2x.png"; sourceTree = "<group>"; };
+		2BE7194D14DC43A200B530FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE7194F14DC43AB00B530FC /* AVFoundation.framework in Frameworks */,
 				2BE7191214DC3F8B00B530FC /* UIKit.framework in Frameworks */,
 				2BE7191414DC3F8B00B530FC /* Foundation.framework in Frameworks */,
 				2BE7191614DC3F8B00B530FC /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +90,7 @@
 		2BE7191014DC3F8B00B530FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BE7194D14DC43A200B530FC /* AVFoundation.framework */,
 				2BE7191114DC3F8B00B530FC /* UIKit.framework */,
 				2BE7191314DC3F8B00B530FC /* Foundation.framework */,
 				2BE7191514DC3F8B00B530FC /* CoreGraphics.framework */,
