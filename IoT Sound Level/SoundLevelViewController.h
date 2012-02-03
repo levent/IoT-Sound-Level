@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface SoundLevelViewController : UIViewController
+@interface SoundLevelViewController : UIViewController {
+    AVAudioRecorder *recorder;
+    NSTimer *levelTimer;
+}
+
+- (void)levelTimerCallback:(NSTimer *)timer;
 
 @end

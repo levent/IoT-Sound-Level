@@ -14,7 +14,6 @@
 		2BE7191E14DC3F8B00B530FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7191D14DC3F8B00B530FC /* main.m */; };
 		2BE7192214DC3F8B00B530FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192114DC3F8B00B530FC /* AppDelegate.m */; };
 		2BE7192514DC3F8B00B530FC /* SoundLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192414DC3F8B00B530FC /* SoundLevelViewController.m */; };
-		2BE7192C14DC3F8B00B530FC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192B14DC3F8B00B530FC /* SecondViewController.m */; };
 		2BE7193314DC3F8B00B530FC /* SoundLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7193114DC3F8B00B530FC /* SoundLevelViewController.xib */; };
 		2BE7193E14DC404900B530FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7193D14DC404900B530FC /* SettingsViewController.m */; };
 		2BE7194014DC406D00B530FC /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7193F14DC406D00B530FC /* SettingsViewController.xib */; };
@@ -40,8 +39,6 @@
 		2BE7192114DC3F8B00B530FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2BE7192314DC3F8B00B530FC /* SoundLevelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundLevelViewController.h; sourceTree = "<group>"; };
 		2BE7192414DC3F8B00B530FC /* SoundLevelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundLevelViewController.m; sourceTree = "<group>"; };
-		2BE7192A14DC3F8B00B530FC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		2BE7192B14DC3F8B00B530FC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		2BE7193214DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SoundLevelViewController.xib; sourceTree = "<group>"; };
 		2BE7193C14DC404900B530FC /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		2BE7193D14DC404900B530FC /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
@@ -111,8 +108,6 @@
 				2BE7192114DC3F8B00B530FC /* AppDelegate.m */,
 				2BE7192314DC3F8B00B530FC /* SoundLevelViewController.h */,
 				2BE7192414DC3F8B00B530FC /* SoundLevelViewController.m */,
-				2BE7192A14DC3F8B00B530FC /* SecondViewController.h */,
-				2BE7192B14DC3F8B00B530FC /* SecondViewController.m */,
 				2BE7193C14DC404900B530FC /* SettingsViewController.h */,
 				2BE7193D14DC404900B530FC /* SettingsViewController.m */,
 				2BE7193114DC3F8B00B530FC /* SoundLevelViewController.xib */,
@@ -205,7 +200,6 @@
 				2BE7191E14DC3F8B00B530FC /* main.m in Sources */,
 				2BE7192214DC3F8B00B530FC /* AppDelegate.m in Sources */,
 				2BE7192514DC3F8B00B530FC /* SoundLevelViewController.m in Sources */,
-				2BE7192C14DC3F8B00B530FC /* SecondViewController.m in Sources */,
 				2BE7193E14DC404900B530FC /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
