@@ -13,14 +13,17 @@
 		2BE7191C14DC3F8B00B530FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7191A14DC3F8B00B530FC /* InfoPlist.strings */; };
 		2BE7191E14DC3F8B00B530FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7191D14DC3F8B00B530FC /* main.m */; };
 		2BE7192214DC3F8B00B530FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192114DC3F8B00B530FC /* AppDelegate.m */; };
-		2BE7192514DC3F8B00B530FC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192414DC3F8B00B530FC /* FirstViewController.m */; };
-		2BE7192714DC3F8B00B530FC /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7192614DC3F8B00B530FC /* first.png */; };
-		2BE7192914DC3F8B00B530FC /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7192814DC3F8B00B530FC /* first@2x.png */; };
+		2BE7192514DC3F8B00B530FC /* SoundLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192414DC3F8B00B530FC /* SoundLevelViewController.m */; };
 		2BE7192C14DC3F8B00B530FC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7192B14DC3F8B00B530FC /* SecondViewController.m */; };
-		2BE7192E14DC3F8B00B530FC /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7192D14DC3F8B00B530FC /* second.png */; };
-		2BE7193014DC3F8B00B530FC /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7192F14DC3F8B00B530FC /* second@2x.png */; };
-		2BE7193314DC3F8B00B530FC /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7193114DC3F8B00B530FC /* FirstViewController.xib */; };
-		2BE7193614DC3F8B00B530FC /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7193414DC3F8B00B530FC /* SecondViewController.xib */; };
+		2BE7193314DC3F8B00B530FC /* SoundLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7193114DC3F8B00B530FC /* SoundLevelViewController.xib */; };
+		2BE7193E14DC404900B530FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7193D14DC404900B530FC /* SettingsViewController.m */; };
+		2BE7194014DC406D00B530FC /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7193F14DC406D00B530FC /* SettingsViewController.xib */; };
+		2BE7194314DC41AB00B530FC /* 157-wrench.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194114DC41AB00B530FC /* 157-wrench.png */; };
+		2BE7194414DC41AB00B530FC /* 157-wrench@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194214DC41AB00B530FC /* 157-wrench@2x.png */; };
+		2BE7194714DC426900B530FC /* 160-voicemail-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194514DC426900B530FC /* 160-voicemail-2.png */; };
+		2BE7194814DC426900B530FC /* 160-voicemail-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194614DC426900B530FC /* 160-voicemail-2@2x.png */; };
+		2BE7194B14DC42FB00B530FC /* 66-microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194914DC42FB00B530FC /* 66-microphone.png */; };
+		2BE7194C14DC42FB00B530FC /* 66-microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7194A14DC42FB00B530FC /* 66-microphone@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,22 +31,26 @@
 		2BE7191114DC3F8B00B530FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2BE7191314DC3F8B00B530FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2BE7191514DC3F8B00B530FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2BE7191914DC3F8B00B530FC /* IoT Sound Level-Info.plist */ = {isa = PBXFileReference; path = "IoT Sound Level-Info.plist"; sourceTree = "<group>"; };
+		2BE7191914DC3F8B00B530FC /* IoT Sound Level-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IoT Sound Level-Info.plist"; sourceTree = "<group>"; };
 		2BE7191B14DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BE7191D14DC3F8B00B530FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2BE7191F14DC3F8B00B530FC /* IoT Sound Level-Prefix.pch */ = {isa = PBXFileReference; path = "IoT Sound Level-Prefix.pch"; sourceTree = "<group>"; };
-		2BE7192014DC3F8B00B530FC /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BE7191F14DC3F8B00B530FC /* IoT Sound Level-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IoT Sound Level-Prefix.pch"; sourceTree = "<group>"; };
+		2BE7192014DC3F8B00B530FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BE7192114DC3F8B00B530FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2BE7192314DC3F8B00B530FC /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		2BE7192414DC3F8B00B530FC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		2BE7192614DC3F8B00B530FC /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		2BE7192814DC3F8B00B530FC /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		2BE7192A14DC3F8B00B530FC /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		2BE7192314DC3F8B00B530FC /* SoundLevelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundLevelViewController.h; sourceTree = "<group>"; };
+		2BE7192414DC3F8B00B530FC /* SoundLevelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundLevelViewController.m; sourceTree = "<group>"; };
+		2BE7192A14DC3F8B00B530FC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		2BE7192B14DC3F8B00B530FC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		2BE7192D14DC3F8B00B530FC /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		2BE7192F14DC3F8B00B530FC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		2BE7193214DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
-		2BE7193514DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		2BE7193214DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SoundLevelViewController.xib; sourceTree = "<group>"; };
+		2BE7193C14DC404900B530FC /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2BE7193D14DC404900B530FC /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2BE7193F14DC406D00B530FC /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		2BE7194114DC41AB00B530FC /* 157-wrench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "157-wrench.png"; sourceTree = "<group>"; };
+		2BE7194214DC41AB00B530FC /* 157-wrench@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "157-wrench@2x.png"; sourceTree = "<group>"; };
+		2BE7194514DC426900B530FC /* 160-voicemail-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "160-voicemail-2.png"; sourceTree = "<group>"; };
+		2BE7194614DC426900B530FC /* 160-voicemail-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "160-voicemail-2@2x.png"; sourceTree = "<group>"; };
+		2BE7194914DC42FB00B530FC /* 66-microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "66-microphone.png"; sourceTree = "<group>"; };
+		2BE7194A14DC42FB00B530FC /* 66-microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "66-microphone@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,18 +97,22 @@
 		2BE7191714DC3F8B00B530FC /* IoT Sound Level */ = {
 			isa = PBXGroup;
 			children = (
+				2BE7194914DC42FB00B530FC /* 66-microphone.png */,
+				2BE7194A14DC42FB00B530FC /* 66-microphone@2x.png */,
+				2BE7194514DC426900B530FC /* 160-voicemail-2.png */,
+				2BE7194614DC426900B530FC /* 160-voicemail-2@2x.png */,
+				2BE7194114DC41AB00B530FC /* 157-wrench.png */,
+				2BE7194214DC41AB00B530FC /* 157-wrench@2x.png */,
 				2BE7192014DC3F8B00B530FC /* AppDelegate.h */,
 				2BE7192114DC3F8B00B530FC /* AppDelegate.m */,
-				2BE7192314DC3F8B00B530FC /* FirstViewController.h */,
-				2BE7192414DC3F8B00B530FC /* FirstViewController.m */,
-				2BE7192614DC3F8B00B530FC /* first.png */,
-				2BE7192814DC3F8B00B530FC /* first@2x.png */,
+				2BE7192314DC3F8B00B530FC /* SoundLevelViewController.h */,
+				2BE7192414DC3F8B00B530FC /* SoundLevelViewController.m */,
 				2BE7192A14DC3F8B00B530FC /* SecondViewController.h */,
 				2BE7192B14DC3F8B00B530FC /* SecondViewController.m */,
-				2BE7192D14DC3F8B00B530FC /* second.png */,
-				2BE7192F14DC3F8B00B530FC /* second@2x.png */,
-				2BE7193114DC3F8B00B530FC /* FirstViewController.xib */,
-				2BE7193414DC3F8B00B530FC /* SecondViewController.xib */,
+				2BE7193C14DC404900B530FC /* SettingsViewController.h */,
+				2BE7193D14DC404900B530FC /* SettingsViewController.m */,
+				2BE7193114DC3F8B00B530FC /* SoundLevelViewController.xib */,
+				2BE7193F14DC406D00B530FC /* SettingsViewController.xib */,
 				2BE7191814DC3F8B00B530FC /* Supporting Files */,
 			);
 			path = "IoT Sound Level";
@@ -169,12 +180,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BE7191C14DC3F8B00B530FC /* InfoPlist.strings in Resources */,
-				2BE7192714DC3F8B00B530FC /* first.png in Resources */,
-				2BE7192914DC3F8B00B530FC /* first@2x.png in Resources */,
-				2BE7192E14DC3F8B00B530FC /* second.png in Resources */,
-				2BE7193014DC3F8B00B530FC /* second@2x.png in Resources */,
-				2BE7193314DC3F8B00B530FC /* FirstViewController.xib in Resources */,
-				2BE7193614DC3F8B00B530FC /* SecondViewController.xib in Resources */,
+				2BE7193314DC3F8B00B530FC /* SoundLevelViewController.xib in Resources */,
+				2BE7194014DC406D00B530FC /* SettingsViewController.xib in Resources */,
+				2BE7194314DC41AB00B530FC /* 157-wrench.png in Resources */,
+				2BE7194414DC41AB00B530FC /* 157-wrench@2x.png in Resources */,
+				2BE7194714DC426900B530FC /* 160-voicemail-2.png in Resources */,
+				2BE7194814DC426900B530FC /* 160-voicemail-2@2x.png in Resources */,
+				2BE7194B14DC42FB00B530FC /* 66-microphone.png in Resources */,
+				2BE7194C14DC42FB00B530FC /* 66-microphone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +200,9 @@
 			files = (
 				2BE7191E14DC3F8B00B530FC /* main.m in Sources */,
 				2BE7192214DC3F8B00B530FC /* AppDelegate.m in Sources */,
-				2BE7192514DC3F8B00B530FC /* FirstViewController.m in Sources */,
+				2BE7192514DC3F8B00B530FC /* SoundLevelViewController.m in Sources */,
 				2BE7192C14DC3F8B00B530FC /* SecondViewController.m in Sources */,
+				2BE7193E14DC404900B530FC /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,20 +217,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2BE7193114DC3F8B00B530FC /* FirstViewController.xib */ = {
+		2BE7193114DC3F8B00B530FC /* SoundLevelViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2BE7193214DC3F8B00B530FC /* en */,
 			);
-			name = FirstViewController.xib;
-			sourceTree = "<group>";
-		};
-		2BE7193414DC3F8B00B530FC /* SecondViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2BE7193514DC3F8B00B530FC /* en */,
-			);
-			name = SecondViewController.xib;
+			name = SoundLevelViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
