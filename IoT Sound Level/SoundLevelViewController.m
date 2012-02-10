@@ -136,7 +136,7 @@
 	const double ALPHA = 0.05;
 	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
 	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;
-    currentSoundLevel.text = [NSString stringWithFormat:@"%.2db", [recorder averagePowerForChannel:0]];
+    currentSoundLevel.text = [NSString stringWithFormat:@"%.2fdb", [recorder averagePowerForChannel:0]];
 //	NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
 
 }
