@@ -16,7 +16,13 @@
     double lowPassResults;
     
     IBOutlet UILabel *currentSoundLevel;
+    
+    UIImageView *circle;
 }
+
+@property (nonatomic, retain) UIImageView *circle;
+
+-(void)createCircleView;
 
 - (void)levelTimerCallback:(NSTimer *)timer;
 
