@@ -122,11 +122,6 @@
                              backgroundColorComps[3]);
     
 	CGContextFillEllipseInRect(context, yourRect);	
-    
-    
-    
-    CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);	
-	CGContextStrokeEllipseInRect(context, yourRect);
         
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     
@@ -176,7 +171,7 @@
     
     [UIView animateWithDuration:kTIMER_INTERVAL 
                           delay:0.0 
-                        options:UIViewAnimationCurveEaseInOut 
+                        options:UIViewAnimationCurveEaseIn
                      animations:^{
                          
                          float totalRange = (kMIN_DB-kMAX_DB)*-1;
@@ -186,7 +181,10 @@
                          
                          float newCircleWidth = self.view.frame.size.width * totalPercent;
                          
-                         self.circle.frame = CGRectMake((self.view.frame.size.width-newCircleWidth)/2, kCIRCLE_TOP_MARGIN, newCircleWidth, newCircleWidth);
+                         self.circle.frame = CGRectMake((self.view.frame.size.width-newCircleWidth)/2, 
+                                                        kCIRCLE_TOP_MARGIN+((self.view.frame.size.width-newCircleWidth)/2), 
+                                                        newCircleWidth, 
+                                                        newCircleWidth);
                          
                      }
                      completion:nil];
