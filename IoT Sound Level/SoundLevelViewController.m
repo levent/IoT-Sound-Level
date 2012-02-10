@@ -10,6 +10,8 @@
 
 @implementation SoundLevelViewController
 
+@synthesize circle;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,6 +44,7 @@
     // e.g. self.myOutlet = nil;
 }
 
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -72,6 +75,34 @@
     } else {
         NSLog(@"%@",[error description]);
     }
+}
+
+-(void)createCircleView
+{
+    const int circleMaxWidth = 320;
+    
+    CGSize yourSize = CGSizeMake(circleMaxWidth, circleMaxWidth);				// Canvas
+	CGRect yourRect = CGRectMake(0, 0, circleMaxWidth, circleMaxWidth);				// Rectangulo para dibujar
+    
+	// Context.
+    UIGraphicsBeginImageContextWithOptions(yourSize, NO, 0.f);     // 0.f: Device default scale
+    
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	CGContextSetAllowsAntialiasing(context, true);
+	CGContextSetShouldAntialias(context, true);
+    
+	CGContextAddEllipseInRect(context, yourRect);
+	CGContextClip(context);
+    
+    CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);	
+	CGContextStrokeEllipseInRect(context, yourRect);
+        
+	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+	UIGraphicsEndImageContext();
+    
+    self.circle = [[UIImageView alloc] initWithImage:image];    
+    [self.view addSubview:self.circle];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
