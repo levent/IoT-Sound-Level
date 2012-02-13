@@ -74,6 +74,7 @@
 		2B4D8A3C14E96BF70059CD3B /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		2B4D8A3D14E96BF70059CD3B /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		2B4D8A3F14E96C3F0059CD3B /* PachubeAppCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PachubeAppCredentials.h; sourceTree = "<group>"; };
+		2B4D8A4014E9724D0059CD3B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2BE7190D14DC3F8B00B530FC /* IoT Sound Level.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IoT Sound Level.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE7191114DC3F8B00B530FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2BE7191314DC3F8B00B530FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -209,6 +210,7 @@
 		2BE7191014DC3F8B00B530FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B4D8A4014E9724D0059CD3B /* CoreLocation.framework */,
 				2BE7194D14DC43A200B530FC /* AVFoundation.framework */,
 				2BE7191114DC3F8B00B530FC /* UIKit.framework */,
 				2BE7191314DC3F8B00B530FC /* Foundation.framework */,

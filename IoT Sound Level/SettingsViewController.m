@@ -64,7 +64,7 @@
     }
     else
     {
-        [infoField setText:@"This audio is linked to feed"];
+        [infoField setText:@"Recording to feed"];
         [feedIdField setEnabled:YES];
         [saveButton setHidden:NO];
         [loginButton setHidden:YES];

@@ -6,13 +6,15 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import "PachubeAppCredentials.h"
 #import "SoundLevelViewController.h"
 #import "OAuthRequestController.h"
 
 #define kCIRCLE_WIDTH_PERCENT 90
 #define kCIRCLE_TOP_MARGIN 29
 
-#define kTIMER_INTERVAL 0.10 
+#define kTIMER_INTERVAL 0.10
+#define kRECORDER_INTERVAL 5.0
 
 #define kMIN_DB -60
 #define kMAX_DB 10
@@ -43,7 +45,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+//    locationManager = [[CLLocationManager alloc] init];
+//    locationManager.delegate = self;
+//    locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+//    locationManager.desiredAccuracy = kCLLocationAccuracyBest;    
+    sendLocation = NO;
+    responseData = [NSMutableData data];
     [self createCircleView];
 }
 
@@ -89,6 +96,11 @@
                                                         selector: @selector(levelTimerCallback:) 
                                                         userInfo: nil 
                                                          repeats: YES];
+            recordingTimer = [NSTimer scheduledTimerWithTimeInterval: kRECORDER_INTERVAL
+                                                              target: self
+                                                            selector: @selector(recordingTimerCallback:)
+                                                            userInfo: nil
+                                                             repeats: YES];
     //		levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
         } else {
             NSLog(@"%@",[error description]);
@@ -166,6 +178,7 @@
     [recorder updateMeters];
     
     float currentSoundMeasure = [recorder averagePowerForChannel:0];
+    currentSoundValue = [NSNumber numberWithFloat:currentSoundMeasure];
     
 	const double ALPHA = 0.05;
 	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
@@ -201,6 +214,21 @@
 
 }
 
+-(void)recordingTimerCallback:(NSTimer *)timer {
+    NSString *postBody;
+    if(sendLocation) {
+//        postBody = [[NSString alloc] initWithFormat:@"{\"version\":\"1.0.0\",\"tags\":[\"noise\",\"sound\"],\"location\":{\"lat\":\"%@\",\"lon\":\"%@\"},\"datastreams\":[{\"id\":\"sound_level\",\"current_value\":\"%@\"},{\"id\":\"lat\",\"current_value\":\"%@\"},{\"id\":\"lon\",\"current_value\":\"%@\"}]}", currentLat, currentLon, currentSoundLevel.text, currentLat, currentLon];
+    } else {
+        postBody = [[NSString alloc] initWithFormat:@"{\"version\":\"1.0.0\",\"tags\":[\"noise\",\"sound\"],\"datastreams\":[{\"unit\":{\"symbol\":\"dB\",\"label\":\"Decibel\"},\"id\":\"sound_level\",\"current_value\":\"%@\"}]}", currentSoundValue];
+    }
+    NSString *url = [[NSString alloc] initWithFormat:@"%@/feeds/%@.json?key=%@", kPBapiEndpoint, myFeed.feedId, myFeed.apiKey];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPMethod:@"PUT"];
+    [request setHTTPBody:[postBody dataUsingEncoding:NSUTF8StringEncoding]];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+
+}
+
 
 - (void)beginAuthorisation {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pachube login"
@@ -220,6 +248,7 @@
         [self presentModalViewController:oauthController animated:YES];
     }
 }
+
 //- (void)listenForBlow:(NSTimer *)timer {
 //	[recorder updateMeters];
 //    
@@ -230,5 +259,29 @@
 //	if (lowPassResults > 0.95)
 //		NSLog(@"Mic blow detected");
 //}
+
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+    if(statusCode >= 400) {
+        [connection cancel];
+    }
+	[responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {  
+	[responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"connectionError" object:nil];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse {
+    return nil;
+}
 
 @end
