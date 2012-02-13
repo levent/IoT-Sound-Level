@@ -7,8 +7,7 @@
 //
 
 #import "SoundLevelViewController.h"
-
-
+#import "OAuthRequestController.h"
 
 #define kCIRCLE_WIDTH_PERCENT 90
 #define kCIRCLE_TOP_MARGIN 29
@@ -22,10 +21,11 @@
 
 @synthesize circle;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibNameAndFeed:(NSString *)nibNameOrNil feed:(Feed *)feed bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        myFeed = feed;
         self.title = NSLocalizedString(@"Sound Level", @"Sound Level");
         self.tabBarItem.image = [UIImage imageNamed:@"66-microphone"];
     }
@@ -63,31 +63,36 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSURL *url = [NSURL fileURLWithPath:@"/dev/null"];
     
-    NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-                              [NSNumber numberWithFloat: 44100.0], AVSampleRateKey,
-                              [NSNumber numberWithInt:kAudioFormatAppleLossless], AVFormatIDKey,
-                              [NSNumber numberWithInt:1], AVNumberOfChannelsKey,
-                              [NSNumber numberWithInt: AVAudioQualityMax], AVEncoderAudioQualityKey,
-                              nil];
-    
-    NSError *error;
-    
-    recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
-    
-    if (recorder) {
-        [recorder prepareToRecord];
-        recorder.meteringEnabled = YES;
-        [recorder record];
-		levelTimer = [NSTimer scheduledTimerWithTimeInterval: kTIMER_INTERVAL
-                                                      target: self 
-                                                    selector: @selector(levelTimerCallback:) 
-                                                    userInfo: nil 
-                                                     repeats: YES];
-//		levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
+    if((myFeed.feedId == (id)[NSNull null] || myFeed.feedId.length == 0) || (myFeed.apiKey == (id)[NSNull null] || myFeed.apiKey.length == 0)) {
+        [self beginAuthorisation];
     } else {
-        NSLog(@"%@",[error description]);
+        NSURL *url = [NSURL fileURLWithPath:@"/dev/null"];
+        
+        NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSNumber numberWithFloat: 44100.0], AVSampleRateKey,
+                                  [NSNumber numberWithInt:kAudioFormatAppleLossless], AVFormatIDKey,
+                                  [NSNumber numberWithInt:1], AVNumberOfChannelsKey,
+                                  [NSNumber numberWithInt: AVAudioQualityMax], AVEncoderAudioQualityKey,
+                                  nil];
+        
+        NSError *error;
+        
+        recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
+        
+        if (recorder) {
+            [recorder prepareToRecord];
+            recorder.meteringEnabled = YES;
+            [recorder record];
+            levelTimer = [NSTimer scheduledTimerWithTimeInterval: kTIMER_INTERVAL
+                                                          target: self 
+                                                        selector: @selector(levelTimerCallback:) 
+                                                        userInfo: nil 
+                                                         repeats: YES];
+    //		levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
+        } else {
+            NSLog(@"%@",[error description]);
+        }
     }
 }
 
@@ -196,6 +201,25 @@
 
 }
 
+
+- (void)beginAuthorisation {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pachube login"
+                                                    message:@"You need to login to Pachube to continue"
+                                                   delegate:self
+                                          cancelButtonTitle:@"No thanks"
+                                          otherButtonTitles:@"OK", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if ([title isEqualToString:@"OK"])
+    {
+        OAuthRequestController *oauthController = [[OAuthRequestController alloc] initWithFeed:myFeed];
+        [self presentModalViewController:oauthController animated:YES];
+    }
+}
 //- (void)listenForBlow:(NSTimer *)timer {
 //	[recorder updateMeters];
 //    

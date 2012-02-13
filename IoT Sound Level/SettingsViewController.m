@@ -7,19 +7,25 @@
 //
 
 #import "SettingsViewController.h"
+#import "OAuthRequestController.h"
+
+#import "PachubeAppCredentials.h"
 
 @implementation SettingsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+@synthesize accessToken;
+
+- (id)initWithNibNameAndFeed:(NSString *)nibNameOrNil feed:(Feed *)feed bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        myFeed = feed;
         self.title = NSLocalizedString(@"Settings", @"Settings");
         self.tabBarItem.image = [UIImage imageNamed:@"157-wrench"];
     }
     return self;
 }
-							
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -31,12 +37,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    [feedIdField setText:[[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"]];
-    [apiKeyField setText:[[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"]];
-    feedId = [[NSUserDefaults standardUserDefaults] objectForKey:@"feedId"];
-    apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
 }
 
 - (void)viewDidUnload
@@ -54,6 +54,22 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self loadSettings];
+    if (myFeed.apiKey == nil || myFeed.feedId == nil) {
+        [infoField setText:@"Please login to Pachube"];
+        [feedIdField setEnabled:NO];
+        [saveButton setHidden:YES];
+        [loginButton setHidden:NO];
+        [saveButton setTitle:@"Login" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [infoField setText:@"This audio is linked to feed"];
+        [feedIdField setEnabled:YES];
+        [saveButton setHidden:NO];
+        [loginButton setHidden:YES];
+        [saveButton setTitle:@"Update" forState:UIControlStateNormal];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -72,26 +88,24 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (void)loadSettings {
+    [feedIdField setText:myFeed.feedId];
+}
+
 -(IBAction)saveSettings:(id)sender {
     if (feedIdField.text != (id)[NSNull null] && feedIdField.text.length != 0) {
-        feedId = [[NSString alloc] initWithFormat:feedIdField.text];
-        [feedIdField setText:feedId];
-        NSUserDefaults *feedIdDefault = [NSUserDefaults standardUserDefaults];
-        [feedIdDefault setObject:feedId forKey:@"feedId"];
+        [myFeed saveFeedId:feedIdField.text];
     }
-    if (apiKeyField.text != (id)[NSNull null] && apiKeyField.text.length != 0) {
-        apiKey = [[NSString alloc] initWithFormat:apiKeyField.text];
-        [apiKeyField setText:apiKey];
-        NSUserDefaults *apiKeyDefault = [NSUserDefaults standardUserDefaults];
-        [apiKeyDefault setObject:apiKey forKey:@"apiKey"];
-    }
-    
     [self backgroundClick:sender];
 }
 
 - (IBAction)backgroundClick:(id)sender {
     [feedIdField resignFirstResponder];
-    [apiKeyField resignFirstResponder];
+}
+
+- (IBAction)beginAuthorisation:(id)sender {
+    OAuthRequestController *oauthController = [[OAuthRequestController alloc] initWithFeed:myFeed];
+    [self presentModalViewController:oauthController animated:YES];
 }
 
 @end

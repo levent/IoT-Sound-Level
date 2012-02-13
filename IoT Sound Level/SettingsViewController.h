@@ -8,15 +8,25 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "FeedDelegate.h"
+#import "Feed.h"
 
-@interface SettingsViewController : UIViewController {
-    NSString *feedId;
-    NSString *apiKey;
+@interface SettingsViewController : UIViewController <FeedDelegate> {
+//    NSString *feedId;
+//    NSString *apiKey;
+    
+    Feed *myFeed;
     
     IBOutlet UITextField *feedIdField;
-    IBOutlet UITextField *apiKeyField;
+    IBOutlet UILabel *infoField;
+    IBOutlet UIButton *saveButton;
+    IBOutlet UIButton *loginButton;
 }
+@property (nonatomic, retain) NSString *accessToken;
 
 -(IBAction)saveSettings:(id)sender;
 -(IBAction)backgroundClick:(id)sender;
+- (IBAction)beginAuthorisation:(id)sender;
+
+- (void)loadSettings;
 @end
