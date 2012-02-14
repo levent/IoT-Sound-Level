@@ -23,6 +23,8 @@
 		2B4D8A3B14E96BDE0059CD3B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D8A3014E96BDE0059CD3B /* SBJsonWriter.m */; };
 		2B4D8A3E14E96BF70059CD3B /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D8A3D14E96BF70059CD3B /* NSObject+SBJson.m */; };
 		2BC1837514EA60C300A8D86F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4D8A4014E9724D0059CD3B /* CoreLocation.framework */; };
+		2BC1837814EA6B9F00A8D86F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1837714EA6B9F00A8D86F /* icon.png */; };
+		2BC1837A14EA6BF100A8D86F /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1837914EA6BF100A8D86F /* icon@2x.png */; };
 		2BE7191214DC3F8B00B530FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191114DC3F8B00B530FC /* UIKit.framework */; };
 		2BE7191414DC3F8B00B530FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191314DC3F8B00B530FC /* Foundation.framework */; };
 		2BE7191614DC3F8B00B530FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191514DC3F8B00B530FC /* CoreGraphics.framework */; };
@@ -76,6 +78,8 @@
 		2B4D8A3D14E96BF70059CD3B /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		2B4D8A3F14E96C3F0059CD3B /* PachubeAppCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PachubeAppCredentials.h; sourceTree = "<group>"; };
 		2B4D8A4014E9724D0059CD3B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2BC1837714EA6B9F00A8D86F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		2BC1837914EA6BF100A8D86F /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		2BE7190D14DC3F8B00B530FC /* IoT Sound Level.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IoT Sound Level.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE7191114DC3F8B00B530FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2BE7191314DC3F8B00B530FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,6 +199,8 @@
 		2BE7190214DC3F8B00B530FC = {
 			isa = PBXGroup;
 			children = (
+				2BC1837914EA6BF100A8D86F /* icon@2x.png */,
+				2BC1837714EA6B9F00A8D86F /* icon.png */,
 				2BE7191714DC3F8B00B530FC /* IoT Sound Level */,
 				2BE7191014DC3F8B00B530FC /* Frameworks */,
 				2BE7190E14DC3F8B00B530FC /* Products */,
@@ -311,6 +317,8 @@
 				2BE7194B14DC42FB00B530FC /* 66-microphone.png in Resources */,
 				2BE7194C14DC42FB00B530FC /* 66-microphone@2x.png in Resources */,
 				2B4D8A1814E96B930059CD3B /* OAuthRequestController.xib in Resources */,
+				2BC1837814EA6B9F00A8D86F /* icon.png in Resources */,
+				2BC1837A14EA6BF100A8D86F /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +424,7 @@
 				GCC_PREFIX_HEADER = "IoT Sound Level/IoT Sound Level-Prefix.pch";
 				INFOPLIST_FILE = "IoT Sound Level/IoT Sound Level-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -423,10 +432,15 @@
 		2BE7193B14DC3F8B00B530FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IoT Sound Level/IoT Sound Level-Prefix.pch";
 				INFOPLIST_FILE = "IoT Sound Level/IoT Sound Level-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
