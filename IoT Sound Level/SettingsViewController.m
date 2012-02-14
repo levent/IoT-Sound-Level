@@ -64,11 +64,11 @@
     }
     else
     {
-        [infoField setText:@"Recording to feed"];
+        [infoField setText:@"Recording to Pachube feed"];
         [feedIdField setEnabled:YES];
         [saveButton setHidden:NO];
         [loginButton setHidden:YES];
-        [saveButton setTitle:@"Update" forState:UIControlStateNormal];
+        [saveButton setTitle:@"Save" forState:UIControlStateNormal];
     }
 }
 
@@ -106,6 +106,14 @@
 - (IBAction)beginAuthorisation:(id)sender {
     OAuthRequestController *oauthController = [[OAuthRequestController alloc] initWithFeed:myFeed];
     [self presentModalViewController:oauthController animated:YES];
+}
+
+- (IBAction)frequencyChanged:(UISlider *)sender
+{
+    int discreteValue = roundl([sender value]);
+    [sender setValue:(float)discreteValue];
+    updateFrequencyValue.text = [NSString stringWithFormat:@"%.0f secs", [sender value]];
+    [myFeed saveUpdateFrequency:[NSNumber numberWithFloat:[sender value]]];
 }
 
 @end

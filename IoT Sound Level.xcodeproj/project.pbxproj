@@ -22,6 +22,7 @@
 		2B4D8A3A14E96BDE0059CD3B /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D8A2E14E96BDE0059CD3B /* SBJsonUTF8Stream.m */; };
 		2B4D8A3B14E96BDE0059CD3B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D8A3014E96BDE0059CD3B /* SBJsonWriter.m */; };
 		2B4D8A3E14E96BF70059CD3B /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D8A3D14E96BF70059CD3B /* NSObject+SBJson.m */; };
+		2BC1837514EA60C300A8D86F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4D8A4014E9724D0059CD3B /* CoreLocation.framework */; };
 		2BE7191214DC3F8B00B530FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191114DC3F8B00B530FC /* UIKit.framework */; };
 		2BE7191414DC3F8B00B530FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191314DC3F8B00B530FC /* Foundation.framework */; };
 		2BE7191614DC3F8B00B530FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE7191514DC3F8B00B530FC /* CoreGraphics.framework */; };
@@ -105,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC1837514EA60C300A8D86F /* CoreLocation.framework in Frameworks */,
 				2BE7194F14DC43AB00B530FC /* AVFoundation.framework in Frameworks */,
 				2BE7191214DC3F8B00B530FC /* UIKit.framework in Frameworks */,
 				2BE7191414DC3F8B00B530FC /* Foundation.framework in Frameworks */,

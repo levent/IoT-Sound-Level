@@ -45,11 +45,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    locationManager = [[CLLocationManager alloc] init];
-//    locationManager.delegate = self;
-//    locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
-//    locationManager.desiredAccuracy = kCLLocationAccuracyBest;    
-    sendLocation = NO;
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+//    sendLocation = NO;
     responseData = [NSMutableData data];
     [self createCircleView];
 }
@@ -88,6 +89,7 @@
         recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
         
         if (recorder) {
+            NSLog(@"here");
             [recorder prepareToRecord];
             recorder.meteringEnabled = YES;
             [recorder record];
@@ -96,7 +98,7 @@
                                                         selector: @selector(levelTimerCallback:) 
                                                         userInfo: nil 
                                                          repeats: YES];
-            recordingTimer = [NSTimer scheduledTimerWithTimeInterval: kRECORDER_INTERVAL
+            recordingTimer = [NSTimer scheduledTimerWithTimeInterval: [myFeed.updateFrequency doubleValue]
                                                               target: self
                                                             selector: @selector(recordingTimerCallback:)
                                                             userInfo: nil
@@ -106,6 +108,17 @@
             NSLog(@"%@",[error description]);
         }
     }
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    sendLocation = TRUE;
+    currentLat = [[NSString alloc] initWithFormat:@"%f", newLocation.coordinate.latitude];
+    currentLon = [[NSString alloc] initWithFormat:@"%f", newLocation.coordinate.longitude];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    sendLocation = FALSE;    
 }
 
 -(void)createCircleView
@@ -158,6 +171,9 @@
         levelTimer = nil;
         [recorder stop];
         recorder = nil;
+        
+        [recordingTimer invalidate];
+        recordingTimer = nil;
     }
 }
 
@@ -217,7 +233,7 @@
 -(void)recordingTimerCallback:(NSTimer *)timer {
     NSString *postBody;
     if(sendLocation) {
-//        postBody = [[NSString alloc] initWithFormat:@"{\"version\":\"1.0.0\",\"tags\":[\"noise\",\"sound\"],\"location\":{\"lat\":\"%@\",\"lon\":\"%@\"},\"datastreams\":[{\"id\":\"sound_level\",\"current_value\":\"%@\"},{\"id\":\"lat\",\"current_value\":\"%@\"},{\"id\":\"lon\",\"current_value\":\"%@\"}]}", currentLat, currentLon, currentSoundLevel.text, currentLat, currentLon];
+        postBody = [[NSString alloc] initWithFormat:@"{\"version\":\"1.0.0\",\"tags\":[\"noise\",\"sound\"],\"location\":{\"lat\":\"%@\",\"lon\":\"%@\"},\"datastreams\":[{\"id\":\"sound_level\",\"current_value\":\"%@\"},{\"id\":\"lat\",\"current_value\":\"%@\"},{\"id\":\"lon\",\"current_value\":\"%@\"}]}", currentLat, currentLon, currentSoundValue, currentLat, currentLon];
     } else {
         postBody = [[NSString alloc] initWithFormat:@"{\"version\":\"1.0.0\",\"tags\":[\"noise\",\"sound\"],\"datastreams\":[{\"unit\":{\"symbol\":\"dB\",\"label\":\"Decibel\"},\"id\":\"sound_level\",\"current_value\":\"%@\"}]}", currentSoundValue];
     }

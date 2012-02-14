@@ -9,13 +9,27 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "IoT Sound Level/SoundLevelViewController.m"
-         timestampString = "350845003.721574"
+         timestampString = "350906398.431462"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "220"
-         endingLineNumber = "220"
+         startingLineNumber = "236"
+         endingLineNumber = "236"
          landmarkName = "-recordingTimerCallback:"
          landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "IoT Sound Level/Feed.h"
+         timestampString = "350905990.865823"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "17"
+         endingLineNumber = "17"
+         landmarkName = "updateFrequency"
+         landmarkType = "19">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

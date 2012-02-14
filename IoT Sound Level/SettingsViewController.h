@@ -21,12 +21,16 @@
     IBOutlet UILabel *infoField;
     IBOutlet UIButton *saveButton;
     IBOutlet UIButton *loginButton;
+    
+    IBOutlet UISlider *updateFrequency;
+    IBOutlet UILabel *updateFrequencyValue;
 }
 @property (nonatomic, retain) NSString *accessToken;
 
--(IBAction)saveSettings:(id)sender;
--(IBAction)backgroundClick:(id)sender;
+- (IBAction)saveSettings:(id)sender;
+- (IBAction)backgroundClick:(id)sender;
 - (IBAction)beginAuthorisation:(id)sender;
+- (IBAction)frequencyChanged:(id)sender;
 
 - (void)loadSettings;
 @end

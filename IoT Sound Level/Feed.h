@@ -14,7 +14,9 @@
 @property (nonatomic, retain) NSString *currentValue;
 @property (nonatomic, retain) NSString *feedId;
 @property (nonatomic, retain) NSString *apiKey;
+@property (nonatomic, retain) NSNumber *updateFrequency;
 -(id)initWithUserDefaults;
 -(void)saveFeedId: (NSString *)value;
 -(void)saveApiKey: (NSString *)value;
+-(void)saveUpdateFrequency: (NSNumber *)value;
 @end

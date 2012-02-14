@@ -11,14 +11,15 @@
 #import "Feed.h"
 #import "FeedDelegate.h"
 
-@interface SoundLevelViewController : UIViewController <FeedDelegate, UIAlertViewDelegate, NSURLConnectionDataDelegate> {
+@interface SoundLevelViewController : UIViewController <FeedDelegate, UIAlertViewDelegate, NSURLConnectionDataDelegate, CLLocationManagerDelegate> {
     AVAudioRecorder *recorder;
     NSTimer *levelTimer;
     NSTimer *recordingTimer;
     
     BOOL *sendLocation;
-    
-//    CLLocationManager *locationManager;
+    CLLocationManager *locationManager;
+    NSString *currentLat;
+    NSString *currentLon;
     
     double lowPassResults;
     
