@@ -80,14 +80,14 @@
 		2B4D8A4014E9724D0059CD3B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2BC1837714EA6B9F00A8D86F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		2BC1837914EA6BF100A8D86F /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		2BE7190D14DC3F8B00B530FC /* Sound Level.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sound Level.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE7190D14DC3F8B00B530FC /* IoT Sound Level.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IoT Sound Level.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE7191114DC3F8B00B530FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2BE7191314DC3F8B00B530FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2BE7191514DC3F8B00B530FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2BE7191914DC3F8B00B530FC /* Pachube Sound Level Recorder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pachube Sound Level Recorder-Info.plist"; sourceTree = "<group>"; };
+		2BE7191914DC3F8B00B530FC /* IoT Sound Level-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IoT Sound Level-Info.plist"; sourceTree = "<group>"; };
 		2BE7191B14DC3F8B00B530FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BE7191D14DC3F8B00B530FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2BE7191F14DC3F8B00B530FC /* Pachube Sound Level Recorder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pachube Sound Level Recorder-Prefix.pch"; sourceTree = "<group>"; };
+		2BE7191F14DC3F8B00B530FC /* IoT Sound Level-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IoT Sound Level-Prefix.pch"; sourceTree = "<group>"; };
 		2BE7192014DC3F8B00B530FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BE7192114DC3F8B00B530FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2BE7192314DC3F8B00B530FC /* SoundLevelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundLevelViewController.h; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 			children = (
 				2BC1837914EA6BF100A8D86F /* icon@2x.png */,
 				2BC1837714EA6B9F00A8D86F /* icon.png */,
-				2BE7191714DC3F8B00B530FC /* Sound Level */,
+				2BE7191714DC3F8B00B530FC /* IoT Sound Level */,
 				2BE7191014DC3F8B00B530FC /* Frameworks */,
 				2BE7190E14DC3F8B00B530FC /* Products */,
 			);
@@ -210,7 +210,7 @@
 		2BE7190E14DC3F8B00B530FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2BE7190D14DC3F8B00B530FC /* Sound Level.app */,
+				2BE7190D14DC3F8B00B530FC /* IoT Sound Level.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2BE7191714DC3F8B00B530FC /* Sound Level */ = {
+		2BE7191714DC3F8B00B530FC /* IoT Sound Level */ = {
 			isa = PBXGroup;
 			children = (
 				2B4D8A1914E96BD20059CD3B /* SBJson */,
@@ -242,17 +242,17 @@
 				2BE7192114DC3F8B00B530FC /* AppDelegate.m */,
 				2BE7191814DC3F8B00B530FC /* Supporting Files */,
 			);
-			path = "Sound Level";
+			path = "IoT Sound Level";
 			sourceTree = "<group>";
 		};
 		2BE7191814DC3F8B00B530FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				2B4D8A3F14E96C3F0059CD3B /* PachubeAppCredentials.h */,
-				2BE7191914DC3F8B00B530FC /* Pachube Sound Level Recorder-Info.plist */,
+				2BE7191914DC3F8B00B530FC /* IoT Sound Level-Info.plist */,
 				2BE7191A14DC3F8B00B530FC /* InfoPlist.strings */,
 				2BE7191D14DC3F8B00B530FC /* main.m */,
-				2BE7191F14DC3F8B00B530FC /* Pachube Sound Level Recorder-Prefix.pch */,
+				2BE7191F14DC3F8B00B530FC /* IoT Sound Level-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -260,9 +260,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BE7190C14DC3F8B00B530FC /* Sound Level */ = {
+		2BE7190C14DC3F8B00B530FC /* IoT Sound Level */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BE7193914DC3F8B00B530FC /* Build configuration list for PBXNativeTarget "Sound Level" */;
+			buildConfigurationList = 2BE7193914DC3F8B00B530FC /* Build configuration list for PBXNativeTarget "IoT Sound Level" */;
 			buildPhases = (
 				2BE7190914DC3F8B00B530FC /* Sources */,
 				2BE7190A14DC3F8B00B530FC /* Frameworks */,
@@ -272,9 +272,9 @@
 			);
 			dependencies = (
 			);
-			name = "Sound Level";
-			productName = "Sound Level";
-			productReference = 2BE7190D14DC3F8B00B530FC /* Sound Level.app */;
+			name = "IoT Sound Level";
+			productName = "IoT Sound Level";
+			productReference = 2BE7190D14DC3F8B00B530FC /* IoT Sound Level.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +285,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = 2BE7190714DC3F8B00B530FC /* Build configuration list for PBXProject "Sound Level" */;
+			buildConfigurationList = 2BE7190714DC3F8B00B530FC /* Build configuration list for PBXProject "IoT Sound Level" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -297,7 +297,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BE7190C14DC3F8B00B530FC /* Sound Level */,
+				2BE7190C14DC3F8B00B530FC /* IoT Sound Level */,
 			);
 		};
 /* End PBXProject section */
@@ -423,9 +423,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sound Level/Pachube Sound Level Recorder-Prefix.pch";
-				INFOPLIST_FILE = "Sound Level/Pachube Sound Level Recorder-Info.plist";
-				PRODUCT_NAME = "Sound Level";
+				GCC_PREFIX_HEADER = "IoT Sound Level/IoT Sound Level-Prefix.pch";
+				INFOPLIST_FILE = "IoT Sound Level/IoT Sound Level-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,9 +437,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sound Level/Pachube Sound Level Recorder-Prefix.pch";
-				INFOPLIST_FILE = "Sound Level/Pachube Sound Level Recorder-Info.plist";
-				PRODUCT_NAME = "Sound Level";
+				GCC_PREFIX_HEADER = "IoT Sound Level/IoT Sound Level-Prefix.pch";
+				INFOPLIST_FILE = "IoT Sound Level/IoT Sound Level-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -450,7 +450,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BE7190714DC3F8B00B530FC /* Build configuration list for PBXProject "Sound Level" */ = {
+		2BE7190714DC3F8B00B530FC /* Build configuration list for PBXProject "IoT Sound Level" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BE7193714DC3F8B00B530FC /* Debug */,
@@ -459,7 +459,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BE7193914DC3F8B00B530FC /* Build configuration list for PBXNativeTarget "Sound Level" */ = {
+		2BE7193914DC3F8B00B530FC /* Build configuration list for PBXNativeTarget "IoT Sound Level" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BE7193A14DC3F8B00B530FC /* Debug */,

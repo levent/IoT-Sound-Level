@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Sound Level.xcodeproj">
+      location = "self:IoT Sound Level.xcodeproj">
    </FileRef>
 </Workspace>
