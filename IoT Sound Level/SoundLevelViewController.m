@@ -89,7 +89,6 @@
         recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
         
         if (recorder) {
-            NSLog(@"here");
             [recorder prepareToRecord];
             recorder.meteringEnabled = YES;
             [recorder record];

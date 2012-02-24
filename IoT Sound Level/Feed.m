@@ -25,7 +25,7 @@
     if(updateFrequency == nil) {
         [self saveUpdateFrequency:[NSNumber numberWithDouble:5.0]];
     }
-    NSLog(@"freq: %@", updateFrequency);
+//    NSLog(@"freq: %@", updateFrequency);
     return self;
 }
 
