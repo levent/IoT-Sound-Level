@@ -233,7 +233,7 @@
 -(void)recordingTimerCallback:(NSTimer *)timer {
     NSString *postBody;
     if(sendLocation) {
-        postBody = [[NSString alloc] initWithFormat:@"{\"version\":\"1.0.0\",\"tags\":[\"noise\",\"sound\"],\"location\":{\"lat\":\"%@\",\"lon\":\"%@\"},\"datastreams\":[{\"id\":\"sound_level\",\"current_value\":\"%@\"},{\"id\":\"lat\",\"current_value\":\"%@\"},{\"id\":\"lon\",\"current_value\":\"%@\"}]}", currentLat, currentLon, currentSoundValue, currentLat, currentLon];
+        postBody = [[NSString alloc] initWithFormat:@"{\"version\":\"1.0.0\",\"tags\":[\"noise\",\"sound\"],\"location\":{\"lat\":\"%@\",\"lon\":\"%@\"},\"datastreams\":[{\"id\":\"sound_level\",\"current_value\":\"%@\",\"unit\":{\"symbol\":\"dB\",\"label\":\"Decibel\"}},{\"id\":\"lat\",\"current_value\":\"%@\"},{\"id\":\"lon\",\"current_value\":\"%@\"}]}", currentLat, currentLon, currentSoundValue, currentLat, currentLon];
     } else {
         postBody = [[NSString alloc] initWithFormat:@"{\"version\":\"1.0.0\",\"tags\":[\"noise\",\"sound\"],\"datastreams\":[{\"unit\":{\"symbol\":\"dB\",\"label\":\"Decibel\"},\"id\":\"sound_level\",\"current_value\":\"%@\"}]}", currentSoundValue];
     }
