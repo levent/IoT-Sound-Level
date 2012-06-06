@@ -140,7 +140,7 @@
     NSURL *fullURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/feeds.json?key=%@", kPBapiEndpoint, myFeed.apiKey]];
     NSMutableURLRequest *newFeedRequest = [NSMutableURLRequest requestWithURL:fullURL];
     [newFeedRequest setHTTPMethod:@"POST"];
-    NSString *postString = @"{\"title\":\"IoT Sound Level feed\",\"version\":\"1.0.0\",\"datastreams\":[{\"id\":\"sound_level\",\"current_value\":\"0\"}]}";
+    NSString *postString = @"{\"title\":\"Sound Level feed\",\"version\":\"1.0.0\",\"datastreams\":[{\"id\":\"sound_level\",\"current_value\":\"0\"}]}";
 //    NSLog(@"post string: %@", postString);
     [newFeedRequest setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     [[NSURLConnection alloc] initWithRequest:newFeedRequest delegate:self];

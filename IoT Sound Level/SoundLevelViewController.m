@@ -246,8 +246,8 @@
 
 
 - (void)beginAuthorisation {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pachube login"
-                                                    message:@"You need to login to Pachube to continue"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cosm login"
+                                                    message:@"You need to login to Cosm to continue"
                                                    delegate:self
                                           cancelButtonTitle:@"No thanks"
                                           otherButtonTitles:@"OK", nil];
