@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PachubeAppCredentials.h"
+#import "CosmAppCredentials.h"
 #import "SoundLevelViewController.h"
 #import "OAuthRequestController.h"
 

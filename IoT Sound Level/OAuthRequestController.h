@@ -20,7 +20,7 @@
 }
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 
-- (NSURLRequest *)authenticateOnPachube;
+- (NSURLRequest *)authenticateOnCosm;
 - (void)verifyWithCode:(NSString *)accessCode;
 - (void)extractApiKey:(NSString *)responseString;
 - (void)createFeed;

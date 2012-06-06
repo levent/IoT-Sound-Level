@@ -8,7 +8,7 @@
 
 #import "OAuthRequestController.h"
 
-#import "PachubeAppCredentials.h"
+#import "CosmAppCredentials.h"
 
 @implementation OAuthRequestController
 
@@ -45,7 +45,7 @@
 {
     self.webView.delegate = self;
     self.webView.scalesPageToFit = YES;
-    [self.webView loadRequest:[self authenticateOnPachube]];
+    [self.webView loadRequest:[self authenticateOnCosm]];
 }
 
 - (void)viewDidUnload
@@ -66,7 +66,7 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (NSURLRequest *)authenticateOnPachube {
+- (NSURLRequest *)authenticateOnCosm {
     NSURL *fullURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/oauth/authenticate?client_id=%@", kPBsiteEndpoint, kPBoAuthAppId]];
     NSMutableURLRequest *authRequest = [NSMutableURLRequest requestWithURL:fullURL];
     [authRequest setHTTPMethod:@"GET"];

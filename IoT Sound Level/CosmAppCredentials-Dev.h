@@ -1,5 +1,5 @@
 //
-//  PachubeAppCredentials.h
+//  CosmAppCredentials.h
 //  IoTally
 //
 //  Created by Levent Ali on 09/02/2012.

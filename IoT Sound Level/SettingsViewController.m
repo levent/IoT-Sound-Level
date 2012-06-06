@@ -9,7 +9,7 @@
 #import "SettingsViewController.h"
 #import "OAuthRequestController.h"
 
-#import "PachubeAppCredentials.h"
+#import "CosmAppCredentials.h"
 
 @implementation SettingsViewController
 
@@ -56,7 +56,7 @@
     [super viewDidAppear:animated];
     [self loadSettings];
     if (myFeed.apiKey == nil || myFeed.feedId == nil) {
-        [infoField setText:@"Please login to Pachube"];
+        [infoField setText:@"Please login to Cosm"];
         [feedIdField setEnabled:NO];
         [saveButton setHidden:YES];
         [loginButton setHidden:NO];
@@ -64,7 +64,7 @@
     }
     else
     {
-        [infoField setText:@"Recording to Pachube feed"];
+        [infoField setText:@"Recording to Cosm feed"];
         [feedIdField setEnabled:YES];
         [saveButton setHidden:NO];
         [loginButton setHidden:YES];
