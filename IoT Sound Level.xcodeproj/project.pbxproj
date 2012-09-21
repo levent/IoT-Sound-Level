@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B076222160C74C5008FDEE6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B076221160C74C5008FDEE6 /* Default-568h@2x.png */; };
 		2B4D8A1114E969900059CD3B /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D8A0F14E969900059CD3B /* Feed.m */; };
 		2B4D8A1714E96B930059CD3B /* OAuthRequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D8A1514E96B930059CD3B /* OAuthRequestController.m */; };
 		2B4D8A1814E96B930059CD3B /* OAuthRequestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4D8A1614E96B930059CD3B /* OAuthRequestController.xib */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B076221160C74C5008FDEE6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2B3EF746157F91F200571280 /* CosmAppCredentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CosmAppCredentials.h; sourceTree = "<group>"; };
 		2B4D8A0E14E969900059CD3B /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
 		2B4D8A0F14E969900059CD3B /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		2BE7190214DC3F8B00B530FC = {
 			isa = PBXGroup;
 			children = (
+				2B076221160C74C5008FDEE6 /* Default-568h@2x.png */,
 				2BC1837914EA6BF100A8D86F /* icon@2x.png */,
 				2BC1837714EA6B9F00A8D86F /* icon.png */,
 				2BE7191714DC3F8B00B530FC /* IoT Sound Level */,
@@ -319,6 +322,7 @@
 				2B4D8A1814E96B930059CD3B /* OAuthRequestController.xib in Resources */,
 				2BC1837814EA6B9F00A8D86F /* icon.png in Resources */,
 				2BC1837A14EA6BF100A8D86F /* icon@2x.png in Resources */,
+				2B076222160C74C5008FDEE6 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
